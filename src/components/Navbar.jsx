@@ -36,6 +36,7 @@ const NavBar = () => {
     }
   }, [isAudioPlaying]);
 
+  // Manage navbar visibility and floating-nav
   useEffect(() => {
     if (currentScrollY === 0) {
       // Topmost position: show navbar without floating-nav
@@ -98,7 +99,7 @@ const NavBar = () => {
             {/* Audio player */}
             <button
               onClick={toggleAudioIndicator}
-              className="ml-10 flex items-center space-x-0.5"
+              className="ml-10 flex items-center space-x-0.5 cursor-pointer"
             >
               <audio
                 ref={audioElementRef}
